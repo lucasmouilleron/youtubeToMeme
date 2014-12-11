@@ -28,3 +28,8 @@ Install
 Run
 ---
 - `php meme.php`
+
+TODO
+----
+- Better run
+- Linux install
