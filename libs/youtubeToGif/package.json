@@ -1,0 +1,11 @@
+{
+  "name": "youtubeToGif",
+  "version": "0.0.1",
+  "devDependencies": {
+    "array-map": "0.0.0",
+    "colors": "^1.0.3",
+    "gifify": "^2.0.0",
+    "moment": "^2.8.3",
+    "youtube-dl": "^1.6.0"
+  }
+}
