@@ -7,10 +7,10 @@ require_once("libs/tools.php");
 $videoID = "6Hn8qnsucwo";
 //$videoID = "Pr-8AP0To4k";
 //$videoID = "yLAjKtmT3lk";
-$text = "I DID IT ! OH YES I DID IT VERY VERY WELL !";
+$text = "PRETTY ... PRETTY ... PRETTY GOOD !";
 $from = 30;
 $duration = 5;
-$width = 400;
+$width = 500;
 $fontSize = 35;
 $color = "white";
 $borderColor = "black";
@@ -19,7 +19,7 @@ $borderColor = "black";
 $fontFile = "assets/impact.ttf";
 $gifFile = "data/".$videoID.".gif";
 $gifFileFinal = "data/".$videoID."-final.gif";
-$yOffset = 0;
+$yOffset = 10;
 $xOffset = 0;
 
 ///////////////////////////////////////////////////////////////////
@@ -29,7 +29,9 @@ if($result["code"] != 0) {
 }
 $gif = new Imagick($gifFile);
 $draw = new ImagickDraw();
-$draw->setGravity (Imagick::GRAVITY_CENTER);
+$draw->setGravity (8);
+//Imagick::GRAVITY_SOUTH
+
 $draw->setStrokeColor($borderColor);
 $draw->setStrokeWidth(2);
 $draw->setStrokeAntialias(true);
@@ -39,7 +41,7 @@ $draw->setFontSize($fontSize);
 $draw->setFillColor($color);
 foreach($gif as $frame) {
     list($lines, $lineHeight) = wordWrapAnnotation($gif, $draw, $text, $width - 20);
-    //$lines = array_reverse($lines);
+    $lines = array_reverse($lines);
     for($i = 0; $i < count($lines); $i++) {
         $gif->annotateImage($draw, $xOffset, $yOffset+$i*$lineHeight, 0, $lines[$i]);
     }
