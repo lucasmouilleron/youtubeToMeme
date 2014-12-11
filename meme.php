@@ -7,7 +7,7 @@ require_once("libs/tools.php");
 $videoID = "6Hn8qnsucwo";
 //$videoID = "Pr-8AP0To4k";
 //$videoID = "yLAjKtmT3lk";
-$text = "I DID IT !";
+$text = "I DID IT ! OH YES I DID IT VERY VERY WELL !";
 $from = 30;
 $duration = 5;
 $width = 400;
@@ -39,7 +39,7 @@ $draw->setFontSize($fontSize);
 $draw->setFillColor($color);
 foreach($gif as $frame) {
     list($lines, $lineHeight) = wordWrapAnnotation($gif, $draw, $text, $width - 20);
-    $lines = array_reverse($lines);
+    //$lines = array_reverse($lines);
     for($i = 0; $i < count($lines); $i++) {
         $gif->annotateImage($draw, $xOffset, $yOffset+$i*$lineHeight, 0, $lines[$i]);
     }

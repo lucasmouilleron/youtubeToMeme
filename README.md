@@ -1,6 +1,8 @@
 youtubeToMeme
 =============
 
+![Demo](assets/demo.gif)
+
 Features
 --------
 - Downloads a Youtube video, converts it to an animated gif and adds a custom meme text on top of it
@@ -22,3 +24,7 @@ Install
     - `sudo pecl install imagick`
     - `vi /etc/php.ini` and add `extension=imagick.so`
 - `cd server/youtubeToGif && npm install`
+
+Run
+---
+- `php meme.php`
