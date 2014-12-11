@@ -11,8 +11,6 @@ $text = "I DID IT ! OH YES I DID IT VERY VERY WELL !";
 $from = 30;
 $duration = 5;
 $width = 400;
-$yOffset = 0;
-$xOffset = 0;
 $fontSize = 35;
 $color = "white";
 $borderColor = "black";
@@ -21,6 +19,8 @@ $borderColor = "black";
 $fontFile = "assets/impact.ttf";
 $gifFile = "data/".$videoID.".gif";
 $gifFileFinal = "data/".$videoID."-final.gif";
+$yOffset = 0;
+$xOffset = 0;
 
 ///////////////////////////////////////////////////////////////////
 $result = run("node","libs/youtubeToGif/youtubeToGif.js",$videoID,$width,$from,$duration);
