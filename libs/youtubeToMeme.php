@@ -2,8 +2,8 @@
 
 ///////////////////////////////////////////////////////////////////
 namespace youtubeToMeme;
-define("POSITION_TOP", 2);
-define("POSITION_BOTTOM", 8);
+define("youtubeToMeme\POSITION_TOP", 2);
+define("youtubeToMeme\POSITION_BOTTOM", 8);
 
 ///////////////////////////////////////////////////////////////////
 require_once("tools.php");
@@ -18,7 +18,6 @@ class youtubeToMeme
     private $borderColor = "black";
     private $yOffset = 10;
     private $xOffset = 0;
-    private $position = POSITION_TOP;
 
     ///////////////////////////////////////////////////////////////////
     public function __construct() {
@@ -27,19 +26,19 @@ class youtubeToMeme
     }
 
     ///////////////////////////////////////////////////////////////////
-    public function makeMeme($videoID, $from, $duration, $text, $width) {
+    public function makeMeme($videoID, $from, $duration, $text, $width, $position) {
         
         $gifFile = $this->dataFolder."/".$videoID.".gif";
         $gifFileFinal = $this->dataFolder."/".$videoID."-final.gif";
         
         $result = run("node","libs/youtubeToGif/youtubeToGif.js",$videoID,$width,$from,$duration);
         if($result["code"] != 0) {
-            return null;
+            return array("success"=>false,"hint"=>dump($result["output"]));
         }
 
         $gif = new \Imagick($gifFile);
         $draw = new \ImagickDraw();
-        $draw->setGravity($this->position);
+        $draw->setGravity($position);
         $draw->setStrokeColor($this->borderColor);
         $draw->setStrokeWidth(2);
         $draw->setStrokeAntialias(true);
@@ -49,7 +48,7 @@ class youtubeToMeme
         $draw->setFillColor($this->color);
         foreach($gif as $frame) {
             list($lines, $lineHeight) = $this->wordWrapAnnotation($gif, $draw, $text, $width - 20);
-            if($this->position == POSITION_BOTTOM) {
+            if($position == POSITION_BOTTOM) {
                 $lines = array_reverse($lines);
             }
             for($i = 0; $i < count($lines); $i++) {
@@ -57,7 +56,7 @@ class youtubeToMeme
             }
         }    
         $gif->writeImages($gifFileFinal,true);
-        return $gifFileFinal;
+        return array("success"=>true,"file"=>$gifFileFinal);
     }
 
     ///////////////////////////////////////////////////////////////////

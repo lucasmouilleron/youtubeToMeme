@@ -26,11 +26,11 @@ Install
 
 Run
 ---
-- `php meme.php`
+- `php index.php A7TaY8HWYd8 71 5 "PRETTY GOOD JUNIOR" 500 BOTTOM`
+- `php index.php 6Hn8qnsucwo 30 5 "PRETTY ... PRETTY ... PRETTY ... PRETTY ... PRETTY GOOD" 500 TOP`
 
 TODO
 ----
 - minimal UI
-- Better run
 - Linux install
 - POSITION_BOTTOM flickers

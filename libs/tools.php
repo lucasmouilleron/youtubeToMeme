@@ -15,4 +15,9 @@ function run($command) {
     return array("code"=>$code,"output"=>$output,"success"=>($code==0));
 }
 
+////////////////////////////////////////////////////////////////
+function dump($var) {
+    return var_export($var,true);
+}
+
 ?>
