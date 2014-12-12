@@ -30,6 +30,7 @@ Run
 
 TODO
 ----
+- minimal UI
 - Better run
 - Linux install
 - POSITION_BOTTOM flickers
