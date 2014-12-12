@@ -32,3 +32,4 @@ TODO
 ----
 - Better run
 - Linux install
+- POSITION_BOTTOM flickers
