@@ -1,7 +1,7 @@
 <?php
 
 ///////////////////////////////////////////////////////////////////
-require_once("libs/youtubeToMeme.php");
+require_once(__DIR__."/libs/youtubeToMeme.php");
 
 ///////////////////////////////////////////////////////////////////
 if(count($argv) != 7) die("bad argumenrs : VIDEO_ID FROM DURATION \"TEXT\" WIDTH POSITION[TOP|BOTTOM]");

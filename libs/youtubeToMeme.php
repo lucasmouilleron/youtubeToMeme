@@ -2,6 +2,7 @@
 
 ///////////////////////////////////////////////////////////////////
 namespace youtubeToMeme;
+require_once(__DIR__."/../config.php");
 define("youtubeToMeme\POSITION_TOP", 2);
 define("youtubeToMeme\POSITION_BOTTOM", 8);
 
@@ -13,7 +14,7 @@ class youtubeToMeme
     ///////////////////////////////////////////////////////////////////
     private $fontFile;
     private $dataFolder;
-    private $fontSize = 40;
+    private $fontSize = 30;
     private $color = "white";
     private $borderColor = "black";
     private $yOffset = 10;
@@ -21,8 +22,8 @@ class youtubeToMeme
 
     ///////////////////////////////////////////////////////////////////
     public function __construct() {
-        $this->fontFile = __DIR__."/../assets/impact.ttf";
-        $this->dataFolder = __DIR__."/../data";
+        $this->fontFile = ASSETS_DIR."/impact.ttf";
+        $this->dataFolder = DATA_DIR;
     }
 
     ///////////////////////////////////////////////////////////////////

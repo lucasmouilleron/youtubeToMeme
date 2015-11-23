@@ -1,7 +1,8 @@
 youtubeToMeme
 =============
 
-![Demo](assets/demo.gif)
+Youtube to animated meme generator.
+![Screenshot](http://grabs.lucasmouilleron.com/Screen%20Shot%202015-11-23%20at%2015.29.13.png)
 
 Features
 --------
@@ -26,8 +27,9 @@ Install
 
 Run
 ---
-- `php index.php A7TaY8HWYd8 71 5 "PRETTY GOOD JUNIOR" 500 BOTTOM`
-- `php index.php 6Hn8qnsucwo 30 5 "PRETTY ... PRETTY ... PRETTY ... PRETTY ... PRETTY GOOD" 500 TOP`
+- `php cmd.php A7TaY8HWYd8 71 5 "PRETTY GOOD JUNIOR" 500 BOTTOM`
+- `php cmd.php 6Hn8qnsucwo 30 5 "PRETTY ... PRETTY ... PRETTY ... PRETTY ... PRETTY GOOD" 500 TOP`
+- `php cmd.php puo1Enh9h5k 49 2 "ROMANO LE RELOU" 500 BOTTOM`
 
 TODO
 ----
