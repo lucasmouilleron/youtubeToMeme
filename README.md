@@ -2,7 +2,7 @@ youtubeToMeme
 =============
 
 Youtube to animated meme generator.
-![Screenshot](http://grabs.lucasmouilleron.com/Screen%20Shot%202015-11-23%20at%2015.29.13.png)
+![Screenshot](http://grabs.lucasmouilleron.com/grab%202021-03-13%20at%2009.19.39.png)
 
 Features
 --------
